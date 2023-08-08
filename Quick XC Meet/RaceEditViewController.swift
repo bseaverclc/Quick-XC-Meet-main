@@ -581,6 +581,7 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
 //                                return false
 //                            }
                             
+                            // updating raceathlete before updating raceAthlete
                             raceAthletes[indexPath.row].updateFirebase()
                             
                             let selected = resultsAthletes[resultsSelectedRow]
