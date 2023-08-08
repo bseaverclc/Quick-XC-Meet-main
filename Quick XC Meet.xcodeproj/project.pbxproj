@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E3D356E28A1F2C300C6A376 /* RaceAthletesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D356D28A1F2C300C6A376 /* RaceAthletesTableViewCell.swift */; };
+		4E3D357028A29ACA00C6A376 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D356F28A29ACA00C6A376 /* ScoresViewController.swift */; };
+		4E3D357228A43F8C00C6A376 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D357128A43F8C00C6A376 /* ScoresTableViewCell.swift */; };
+		4E4D056828A7DCE600DC45E2 /* SchoolScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D056728A7DCE600DC45E2 /* SchoolScoreCollectionViewCell.swift */; };
+		4E4D056A28A88BA300DC45E2 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D056928A88BA300DC45E2 /* TeamsViewController.swift */; };
+		4E4D056C28A88F1300DC45E2 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D056B28A88F1300DC45E2 /* TeamsTableViewCell.swift */; };
+		4E4D056E28A9681400DC45E2 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D056D28A9681400DC45E2 /* ColorsViewController.swift */; };
+		4E7F186628C3F698006A5261 /* GradesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F186528C3F698006A5261 /* GradesCollectionViewCell.swift */; };
+		4E7F186828C41B92006A5261 /* ActualScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F186728C41B92006A5261 /* ActualScoresViewController.swift */; };
+		4E7F186A28C4CE22006A5261 /* ActualScoresTeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F186928C4CE22006A5261 /* ActualScoresTeamsTableViewCell.swift */; };
+		4E7F186C28C532DE006A5261 /* AthleteResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F186B28C532DE006A5261 /* AthleteResultsViewController.swift */; };
+		4E7F186E28C53DC1006A5261 /* AthleteResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F186D28C53DC1006A5261 /* AthleteResultsTableViewCell.swift */; };
+		4E9290F82A755DFA0083A832 /* MeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9290F72A755DFA0083A832 /* MeetTableViewCell.swift */; };
+		4EC95EDF289EA76E000BFC3C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC95EDE289EA76E000BFC3C /* UploadViewController.swift */; };
+		4EC95EE1289EF4A9000BFC3C /* AddAthleteToRosterFromRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC95EE0289EF4A9000BFC3C /* AddAthleteToRosterFromRaceViewController.swift */; };
+		4EFB856C288DB96700F3519E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB856B288DB96700F3519E /* AppDelegate.swift */; };
+		4EFB856E288DB96700F3519E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB856D288DB96700F3519E /* SceneDelegate.swift */; };
+		4EFB8570288DB96700F3519E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB856F288DB96700F3519E /* ViewController.swift */; };
+		4EFB8573288DB96700F3519E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB8571288DB96700F3519E /* Main.storyboard */; };
+		4EFB8576288DB96700F3519E /* Quick_XC_Meet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8574288DB96700F3519E /* Quick_XC_Meet.xcdatamodeld */; };
+		4EFB8578288DB96800F3519E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB8577288DB96800F3519E /* Assets.xcassets */; };
+		4EFB857B288DB96800F3519E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB8579288DB96800F3519E /* LaunchScreen.storyboard */; };
+		4EFB8583288DBA6C00F3519E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB8582288DBA6C00F3519E /* GoogleService-Info.plist */; };
+		4EFB8586288DBD5700F3519E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4EFB8585288DBD5700F3519E /* FirebaseAuth */; };
+		4EFB8588288DBD5700F3519E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4EFB8587288DBD5700F3519E /* FirebaseDatabase */; };
+		4EFB858A288DBD5700F3519E /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4EFB8589288DBD5700F3519E /* FirebaseDatabaseSwift */; };
+		4EFB858C288DF7F300F3519E /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB858B288DF7F300F3519E /* Athlete.swift */; };
+		4EFB858E288DF83C00F3519E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB858D288DF83C00F3519E /* School.swift */; };
+		4EFB8590288DF87300F3519E /* Meet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB858F288DF87300F3519E /* Meet.swift */; };
+		4EFB8592288E00A300F3519E /* MeetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8591288E00A300F3519E /* MeetsViewController.swift */; };
+		4EFB8594288E02E100F3519E /* AddMeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8593288E02E100F3519E /* AddMeetViewController.swift */; };
+		4EFB8596288E39AA00F3519E /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8595288E39AA00F3519E /* SchoolsViewController.swift */; };
+		4EFB8598288F32A000F3519E /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8597288F32A000F3519E /* AthletesViewController.swift */; };
+		4EFB859A288F392800F3519E /* AddAthleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB8599288F392800F3519E /* AddAthleteViewController.swift */; };
+		4EFB859C288F6CDF00F3519E /* CoachesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB859B288F6CDF00F3519E /* CoachesVC.swift */; };
+		4EFB859E2890109500F3519E /* AddSchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB859D2890109500F3519E /* AddSchoolsViewController.swift */; };
+		4EFB85A0289022D500F3519E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB859F289022D500F3519E /* HomeViewController.swift */; };
+		4EFB85A228903CEE00F3519E /* RaceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB85A128903CEE00F3519E /* RaceEditViewController.swift */; };
+		4EFB85A4289042B100F3519E /* AddRaceAthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB85A3289042B100F3519E /* AddRaceAthletesViewController.swift */; };
+		4EFB85A62891715B00F3519E /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB85A52891715B00F3519E /* MyCollectionViewCell.swift */; };
+		4EFB85A828917AD400F3519E /* MyUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB85A728917AD400F3519E /* MyUICollectionView.swift */; };
+		4EFB85AA28921E1500F3519E /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB85A928921E1500F3519E /* ResultsTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4E3D356D28A1F2C300C6A376 /* RaceAthletesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceAthletesTableViewCell.swift; sourceTree = "<group>"; };
+		4E3D356F28A29ACA00C6A376 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		4E3D357128A43F8C00C6A376 /* ScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewCell.swift; sourceTree = "<group>"; };
+		4E4D056728A7DCE600DC45E2 /* SchoolScoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolScoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E4D056928A88BA300DC45E2 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		4E4D056B28A88F1300DC45E2 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		4E4D056D28A9681400DC45E2 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		4E7F186528C3F698006A5261 /* GradesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E7F186728C41B92006A5261 /* ActualScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualScoresViewController.swift; sourceTree = "<group>"; };
+		4E7F186928C4CE22006A5261 /* ActualScoresTeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualScoresTeamsTableViewCell.swift; sourceTree = "<group>"; };
+		4E7F186B28C532DE006A5261 /* AthleteResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResultsViewController.swift; sourceTree = "<group>"; };
+		4E7F186D28C53DC1006A5261 /* AthleteResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResultsTableViewCell.swift; sourceTree = "<group>"; };
+		4E9290F72A755DFA0083A832 /* MeetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetTableViewCell.swift; sourceTree = "<group>"; };
+		4EC95EDE289EA76E000BFC3C /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		4EC95EE0289EF4A9000BFC3C /* AddAthleteToRosterFromRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthleteToRosterFromRaceViewController.swift; sourceTree = "<group>"; };
+		4EFB8568288DB96700F3519E /* Quick XC Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick XC Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFB856B288DB96700F3519E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4EFB856D288DB96700F3519E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4EFB856F288DB96700F3519E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EFB8572288DB96700F3519E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EFB8575288DB96700F3519E /* Quick_XC_Meet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quick_XC_Meet.xcdatamodel; sourceTree = "<group>"; };
+		4EFB8577288DB96800F3519E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EFB857A288DB96800F3519E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EFB857C288DB96800F3519E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EFB8582288DBA6C00F3519E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EFB858B288DF7F300F3519E /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		4EFB858D288DF83C00F3519E /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		4EFB858F288DF87300F3519E /* Meet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meet.swift; sourceTree = "<group>"; };
+		4EFB8591288E00A300F3519E /* MeetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetsViewController.swift; sourceTree = "<group>"; };
+		4EFB8593288E02E100F3519E /* AddMeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetViewController.swift; sourceTree = "<group>"; };
+		4EFB8595288E39AA00F3519E /* SchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
+		4EFB8597288F32A000F3519E /* AthletesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesViewController.swift; sourceTree = "<group>"; };
+		4EFB8599288F392800F3519E /* AddAthleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthleteViewController.swift; sourceTree = "<group>"; };
+		4EFB859B288F6CDF00F3519E /* CoachesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesVC.swift; sourceTree = "<group>"; };
+		4EFB859D2890109500F3519E /* AddSchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolsViewController.swift; sourceTree = "<group>"; };
+		4EFB859F289022D500F3519E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4EFB85A128903CEE00F3519E /* RaceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceEditViewController.swift; sourceTree = "<group>"; };
+		4EFB85A3289042B100F3519E /* AddRaceAthletesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRaceAthletesViewController.swift; sourceTree = "<group>"; };
+		4EFB85A52891715B00F3519E /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EFB85A728917AD400F3519E /* MyUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUICollectionView.swift; sourceTree = "<group>"; };
+		4EFB85A928921E1500F3519E /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EFB8565288DB96700F3519E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFB858A288DBD5700F3519E /* FirebaseDatabaseSwift in Frameworks */,
+				4EFB8588288DBD5700F3519E /* FirebaseDatabase in Frameworks */,
+				4EFB8586288DBD5700F3519E /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EFB855F288DB96700F3519E = {
+			isa = PBXGroup;
+			children = (
+				4EFB856A288DB96700F3519E /* Quick XC Meet */,
+				4EFB8569288DB96700F3519E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EFB8569288DB96700F3519E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB8568288DB96700F3519E /* Quick XC Meet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EFB856A288DB96700F3519E /* Quick XC Meet */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB856B288DB96700F3519E /* AppDelegate.swift */,
+				4EFB856D288DB96700F3519E /* SceneDelegate.swift */,
+				4EFB856F288DB96700F3519E /* ViewController.swift */,
+				4EFB858B288DF7F300F3519E /* Athlete.swift */,
+				4EFB858D288DF83C00F3519E /* School.swift */,
+				4EFB858F288DF87300F3519E /* Meet.swift */,
+				4EFB8571288DB96700F3519E /* Main.storyboard */,
+				4E9290F72A755DFA0083A832 /* MeetTableViewCell.swift */,
+				4E7F186D28C53DC1006A5261 /* AthleteResultsTableViewCell.swift */,
+				4E7F186B28C532DE006A5261 /* AthleteResultsViewController.swift */,
+				4E7F186728C41B92006A5261 /* ActualScoresViewController.swift */,
+				4E7F186928C4CE22006A5261 /* ActualScoresTeamsTableViewCell.swift */,
+				4E4D056D28A9681400DC45E2 /* ColorsViewController.swift */,
+				4E4D056728A7DCE600DC45E2 /* SchoolScoreCollectionViewCell.swift */,
+				4E7F186528C3F698006A5261 /* GradesCollectionViewCell.swift */,
+				4E3D357128A43F8C00C6A376 /* ScoresTableViewCell.swift */,
+				4E4D056B28A88F1300DC45E2 /* TeamsTableViewCell.swift */,
+				4E3D356F28A29ACA00C6A376 /* ScoresViewController.swift */,
+				4E4D056928A88BA300DC45E2 /* TeamsViewController.swift */,
+				4E3D356D28A1F2C300C6A376 /* RaceAthletesTableViewCell.swift */,
+				4EC95EDE289EA76E000BFC3C /* UploadViewController.swift */,
+				4EC95EE0289EF4A9000BFC3C /* AddAthleteToRosterFromRaceViewController.swift */,
+				4EFB85A3289042B100F3519E /* AddRaceAthletesViewController.swift */,
+				4EFB85A928921E1500F3519E /* ResultsTableViewCell.swift */,
+				4EFB85A728917AD400F3519E /* MyUICollectionView.swift */,
+				4EFB85A52891715B00F3519E /* MyCollectionViewCell.swift */,
+				4EFB85A128903CEE00F3519E /* RaceEditViewController.swift */,
+				4EFB859F289022D500F3519E /* HomeViewController.swift */,
+				4EFB859B288F6CDF00F3519E /* CoachesVC.swift */,
+				4EFB8597288F32A000F3519E /* AthletesViewController.swift */,
+				4EFB8599288F392800F3519E /* AddAthleteViewController.swift */,
+				4EFB859D2890109500F3519E /* AddSchoolsViewController.swift */,
+				4EFB8595288E39AA00F3519E /* SchoolsViewController.swift */,
+				4EFB8593288E02E100F3519E /* AddMeetViewController.swift */,
+				4EFB8591288E00A300F3519E /* MeetsViewController.swift */,
+				4EFB8577288DB96800F3519E /* Assets.xcassets */,
+				4EFB8579288DB96800F3519E /* LaunchScreen.storyboard */,
+				4EFB857C288DB96800F3519E /* Info.plist */,
+				4EFB8582288DBA6C00F3519E /* GoogleService-Info.plist */,
+				4EFB8574288DB96700F3519E /* Quick_XC_Meet.xcdatamodeld */,
+			);
+			path = "Quick XC Meet";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EFB8567288DB96700F3519E /* Quick XC Meet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EFB857F288DB96800F3519E /* Build configuration list for PBXNativeTarget "Quick XC Meet" */;
+			buildPhases = (
+				4EFB8564288DB96700F3519E /* Sources */,
+				4EFB8565288DB96700F3519E /* Frameworks */,
+				4EFB8566288DB96700F3519E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quick XC Meet";
+			packageProductDependencies = (
+				4EFB8585288DBD5700F3519E /* FirebaseAuth */,
+				4EFB8587288DBD5700F3519E /* FirebaseDatabase */,
+				4EFB8589288DBD5700F3519E /* FirebaseDatabaseSwift */,
+			);
+			productName = "Quick XC Meet";
+			productReference = 4EFB8568288DB96700F3519E /* Quick XC Meet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EFB8560288DB96700F3519E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4EFB8567288DB96700F3519E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 4EFB8563288DB96700F3519E /* Build configuration list for PBXProject "Quick XC Meet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EFB855F288DB96700F3519E;
+			packageReferences = (
+				4EFB8584288DBD5700F3519E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 4EFB8569288DB96700F3519E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EFB8567288DB96700F3519E /* Quick XC Meet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EFB8566288DB96700F3519E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFB857B288DB96800F3519E /* LaunchScreen.storyboard in Resources */,
+				4EFB8583288DBA6C00F3519E /* GoogleService-Info.plist in Resources */,
+				4EFB8578288DB96800F3519E /* Assets.xcassets in Resources */,
+				4EFB8573288DB96700F3519E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EFB8564288DB96700F3519E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFB8594288E02E100F3519E /* AddMeetViewController.swift in Sources */,
+				4EC95EDF289EA76E000BFC3C /* UploadViewController.swift in Sources */,
+				4EFB8590288DF87300F3519E /* Meet.swift in Sources */,
+				4EC95EE1289EF4A9000BFC3C /* AddAthleteToRosterFromRaceViewController.swift in Sources */,
+				4E7F186E28C53DC1006A5261 /* AthleteResultsTableViewCell.swift in Sources */,
+				4E7F186628C3F698006A5261 /* GradesCollectionViewCell.swift in Sources */,
+				4E4D056C28A88F1300DC45E2 /* TeamsTableViewCell.swift in Sources */,
+				4EFB85A828917AD400F3519E /* MyUICollectionView.swift in Sources */,
+				4EFB85A62891715B00F3519E /* MyCollectionViewCell.swift in Sources */,
+				4EFB8596288E39AA00F3519E /* SchoolsViewController.swift in Sources */,
+				4E4D056A28A88BA300DC45E2 /* TeamsViewController.swift in Sources */,
+				4EFB85A4289042B100F3519E /* AddRaceAthletesViewController.swift in Sources */,
+				4E3D357228A43F8C00C6A376 /* ScoresTableViewCell.swift in Sources */,
+				4EFB8592288E00A300F3519E /* MeetsViewController.swift in Sources */,
+				4EFB859A288F392800F3519E /* AddAthleteViewController.swift in Sources */,
+				4EFB85A0289022D500F3519E /* HomeViewController.swift in Sources */,
+				4EFB858C288DF7F300F3519E /* Athlete.swift in Sources */,
+				4EFB85A228903CEE00F3519E /* RaceEditViewController.swift in Sources */,
+				4EFB858E288DF83C00F3519E /* School.swift in Sources */,
+				4EFB8570288DB96700F3519E /* ViewController.swift in Sources */,
+				4EFB859E2890109500F3519E /* AddSchoolsViewController.swift in Sources */,
+				4E9290F82A755DFA0083A832 /* MeetTableViewCell.swift in Sources */,
+				4EFB85AA28921E1500F3519E /* ResultsTableViewCell.swift in Sources */,
+				4E7F186A28C4CE22006A5261 /* ActualScoresTeamsTableViewCell.swift in Sources */,
+				4EFB856C288DB96700F3519E /* AppDelegate.swift in Sources */,
+				4E4D056828A7DCE600DC45E2 /* SchoolScoreCollectionViewCell.swift in Sources */,
+				4E7F186C28C532DE006A5261 /* AthleteResultsViewController.swift in Sources */,
+				4EFB856E288DB96700F3519E /* SceneDelegate.swift in Sources */,
+				4E3D357028A29ACA00C6A376 /* ScoresViewController.swift in Sources */,
+				4E3D356E28A1F2C300C6A376 /* RaceAthletesTableViewCell.swift in Sources */,
+				4EFB8576288DB96700F3519E /* Quick_XC_Meet.xcdatamodeld in Sources */,
+				4E4D056E28A9681400DC45E2 /* ColorsViewController.swift in Sources */,
+				4EFB859C288F6CDF00F3519E /* CoachesVC.swift in Sources */,
+				4EFB8598288F32A000F3519E /* AthletesViewController.swift in Sources */,
+				4E7F186828C41B92006A5261 /* ActualScoresViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4EFB8571288DB96700F3519E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EFB8572288DB96700F3519E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4EFB8579288DB96800F3519E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EFB857A288DB96800F3519E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EFB857D288DB96800F3519E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EFB857E288DB96800F3519E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EFB8580288DB96800F3519E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S22H3YR676;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quick XC Meet/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.Quick-XC-Meet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EFB8581288DB96800F3519E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S22H3YR676;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quick XC Meet/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.Quick-XC-Meet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EFB8563288DB96700F3519E /* Build configuration list for PBXProject "Quick XC Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EFB857D288DB96800F3519E /* Debug */,
+				4EFB857E288DB96800F3519E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EFB857F288DB96800F3519E /* Build configuration list for PBXNativeTarget "Quick XC Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EFB8580288DB96800F3519E /* Debug */,
+				4EFB8581288DB96800F3519E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EFB8584288DBD5700F3519E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EFB8585288DBD5700F3519E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EFB8584288DBD5700F3519E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4EFB8587288DBD5700F3519E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EFB8584288DBD5700F3519E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4EFB8589288DBD5700F3519E /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EFB8584288DBD5700F3519E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4EFB8574288DB96700F3519E /* Quick_XC_Meet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4EFB8575288DB96700F3519E /* Quick_XC_Meet.xcdatamodel */,
+			);
+			currentVersion = 4EFB8575288DB96700F3519E /* Quick_XC_Meet.xcdatamodel */;
+			path = Quick_XC_Meet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4EFB8560288DB96700F3519E /* Project object */;
+}
