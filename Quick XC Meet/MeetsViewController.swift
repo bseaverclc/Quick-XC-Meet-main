@@ -486,6 +486,7 @@ class MeetsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func privateSegAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1{
             privateAccessOutlet.isHidden = false
+            privateAccessOutlet.becomeFirstResponder()
             searchButtonOutlet.isHidden = false
             visibleMeets.removeAll()
             tableView.reloadData()

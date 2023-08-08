@@ -811,7 +811,7 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
                         if indexPath.row == self.resultsAthletes.count - 1{
                             alert.addTextField { textField in
                                 textField.keyboardType = .numberPad
-                                textField.text = "\(indexPath.row - 1)"
+                                textField.text = "\(indexPath.row + 1)"
                             }
                         }
                     
