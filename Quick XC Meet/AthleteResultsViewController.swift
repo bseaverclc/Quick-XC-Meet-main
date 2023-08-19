@@ -160,6 +160,35 @@ class AthleteResultsViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if AppData.fullAccess{
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+          let alert = UIAlertController(title: "Are you sure?", message: "Deleting this race will delete any results for this race", preferredStyle: .alert)
+          alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+          alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+              if let u = self.races[indexPath.row].uid{
+                  self.athlete.deleteRaceFromFirebase(euid: u)
+                  self.races.remove(at: indexPath.row)
+                  tableView.reloadData()
+              }
+             
+         
+            
+          }))
+
+          self.present(alert, animated: true, completion: nil)
+      }
+    }
+    
     func findSplit(t1: String, t2: String)->String{
         let formatter = DateFormatter()
             formatter.dateFormat = "mm:ss"

@@ -346,7 +346,7 @@ class AddMeetViewController: UIViewController, UITableViewDelegate, UITableViewD
         if changeMeet{
             if let sm = selectedMeet{
             sm.updateFirebase(m: meet)
-            
+                    
             
             let alert = UIAlertController(title: "Meet has been changed!", message: "Be sure to reprocess all events that you have already processed", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default) { (action) in

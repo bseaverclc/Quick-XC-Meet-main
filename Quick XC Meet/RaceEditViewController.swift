@@ -1078,8 +1078,9 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
                 
                
             }
-        
+            //let lastselectedRow = resultsSelectedRow
             viewDidAppear(true)
+            //resultsSelectedRow = lastselectedRow
         //updateResultsTableView()
         //scrollToBottom()
         }
