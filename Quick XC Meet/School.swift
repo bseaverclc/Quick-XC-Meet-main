@@ -24,23 +24,31 @@ public class School: Codable{
     
     init(key: String, dict: [String:Any]  ){
         uid = key
-        full = dict["full"] as! String
-        inits = dict["inits"] as! String
-        
-        if let coachesArray = dict["coaches"] as? NSArray{
-        for i in 0..<coachesArray.count{
-            coaches.append(coachesArray[i] as! String)
-        }
-        }
-        
-        if let athletesDict = dict["athletes"] as? [String: Any]{
-            for (key, value) in athletesDict{
-                if let a = value as? [String: Any]{
-                    athletes.append(Athlete(key: key, dict: a))
+        if let f = dict["full"] as? String, let i = dict["inits"] as? String {
+            full = f
+            inits = i
+            
+            if let coachesArray = dict["coaches"] as? NSArray{
+            for i in 0..<coachesArray.count{
+                coaches.append(coachesArray[i] as! String)
+            }
+            }
+            
+            if let athletesDict = dict["athletes"] as? [String: Any]{
+                for (key, value) in athletesDict{
+                    if let a = value as? [String: Any]{
+                        athletes.append(Athlete(key: key, dict: a))
+                    }
                 }
+                
             }
             
         }
+        else{
+            full = "Blank"
+            inits = "B"
+        }
+        
       
         
     }
@@ -65,15 +73,17 @@ public class School: Codable{
     }
     
     func updateFirebase(){
-        var ref = Database.database().reference().child("schoolsNew").child(uid!)
-        let dict = ["full": self.full, "inits":self.inits, "coaches": coaches] as [String : Any]
+        if let ui = uid{
+            var ref = Database.database().reference().child("schoolsNew").child(ui)
+            let dict = ["full": self.full, "inits":self.inits, "coaches": coaches] as [String : Any]
             ref.updateChildValues(dict)
-        
-        ref = ref.child("athletes")
-        for a in athletes{
-            let athDict = ["first": a.first,"last": a.last,"school": a.school, "schoolFull": a.schoolFull] as [String : Any]
-            ref.child(a.uid!).updateChildValues(athDict)
-                  
+            
+            ref = ref.child("athletes")
+            for a in athletes{
+                let athDict = ["first": a.first,"last": a.last,"school": a.school, "schoolFull": a.schoolFull] as [String : Any]
+                ref.child(a.uid!).updateChildValues(athDict)
+                
+            }
         }
         
     }
