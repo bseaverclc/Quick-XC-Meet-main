@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick XC Meet 2.3.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a46-Kg-8D3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick XC Meet 2.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a46-Kg-8D3">
                                 <rect key="frame" x="0.0" y="64" width="414" height="62.666666666666657"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -2681,7 +2681,7 @@
                                                         <rect key="frame" x="0.0" y="23.999999999999996" width="179" height="36.666666666666657"/>
                                                         <segments>
                                                             <segment title="M"/>
-                                                            <segment title="W"/>
+                                                            <segment title="F"/>
                                                         </segments>
                                                         <color key="selectedSegmentTintColor" systemColor="systemBlueColor"/>
                                                     </segmentedControl>

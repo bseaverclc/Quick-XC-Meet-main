@@ -59,6 +59,7 @@ class AddAthleteToRosterFromRaceViewController: UIViewController {
             let last = lastTextField.text
             let schoolInit = schoolSegController.titleForSegment(at: schoolSegController.selectedSegmentIndex)
             let year = yearSegController.titleForSegment(at: yearSegController.selectedSegmentIndex)
+            // changed the button from W to F in version 2.4 of app
             let gender = genderSegController.titleForSegment(at: genderSegController.selectedSegmentIndex)
          
            
