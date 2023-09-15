@@ -313,7 +313,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="At9-bz-mgj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bZy-td-W5X">
+                        <barButtonItem key="rightBarButtonItem" title="Add Athlete" id="bZy-td-W5X">
                             <connections>
                                 <action selector="addAthleteAction:" destination="1ay-vu-Yo7" id="V1l-B6-wMF"/>
                             </connections>
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9De-rr-Jln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="839"/>
+            <point key="canvasLocation" x="1767" y="851"/>
         </scene>
         <!--Athlete Results View Controller-->
         <scene sceneID="S68-5s-6Rg">
@@ -1999,7 +1999,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="06j-A1-2XB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rlG-Rb-a72">
+                        <barButtonItem key="rightBarButtonItem" title="Add Athletes" id="rlG-Rb-a72">
                             <connections>
                                 <action selector="addAthleteAction:" destination="YJJ-UH-yWi" id="83D-ub-QTt"/>
                             </connections>
@@ -2136,7 +2136,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hhZ-Cd-Nmh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ebC-rN-btB">
+                        <barButtonItem key="rightBarButtonItem" title="New Athlete" id="ebC-rN-btB">
                             <connections>
                                 <action selector="addAthletetoRosterAction:" destination="5wd-mm-Igi" id="Fva-N1-srC"/>
                             </connections>
