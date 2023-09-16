@@ -11,7 +11,9 @@ import Firebase
 
 class AthletesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate {
 
-   
+    @IBOutlet weak var blankLabel1: UILabel!
+    
+    @IBOutlet weak var blankLabel2: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var coachesButtonOutlet: UIButton!
     @IBOutlet weak var uploadButtonOutlet: UIButton!
@@ -56,6 +58,12 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
         if !canEditAthletes{
             uploadButtonOutlet.isHidden = true
             advanceGradesOutlet.isHidden = true
+            blankLabel1.isHidden = false
+            blankLabel2.isHidden = false
+        }
+        if !AppData.fullAccess{
+            uploadButtonOutlet.isHidden = true
+            blankLabel1.isHidden = false
         }
 
        

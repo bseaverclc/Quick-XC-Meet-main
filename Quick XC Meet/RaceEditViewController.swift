@@ -324,11 +324,12 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
         updateResultsTableView() // sorts results by place
         resultsCollectionView.reloadData()
         
-        // keeping selected row when resultstable view changes
-        if resultsSelectedRow <= 0 && resultsSelectedRow < resultsAthletes.count{
-            resultsTableView.selectRow(at: IndexPath(row: resultsSelectedRow, section: 0), animated: true, scrollPosition: .none)
-        }
-  
+     
+            // keeping selected row when resultstable view changes
+            if self.resultsSelectedRow >= 0 && self.resultsSelectedRow < self.resultsAthletes.count{
+                self.resultsTableView.selectRow(at: IndexPath(row: self.resultsSelectedRow, section: 0), animated: true, scrollPosition: .none)
+                    }
+            
         
     
         //resultsSelectedRow = -1
