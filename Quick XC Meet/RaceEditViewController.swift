@@ -328,6 +328,20 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
             // keeping selected row when resultstable view changes
             if self.resultsSelectedRow >= 0 && self.resultsSelectedRow < self.resultsAthletes.count{
                 self.resultsTableView.selectRow(at: IndexPath(row: self.resultsSelectedRow, section: 0), animated: true, scrollPosition: .none)
+                
+                // Showing only names from selected row school
+                raceAthletes.removeAll()
+                for a in AppData.allAthletes{
+                    for e in a.races{
+                        if e.name == selectedRace && e.meetName == meet.name && a.school == resultsAthletes[resultsSelectedRow].school  && a.first != "?" && e.markString == ""{
+                            raceAthletes.append(a)
+                        }
+                    }
+         
+                }
+                sortRacebySchoolAndName()
+                self.tableView.reloadData()
+                
                     }
             
         
