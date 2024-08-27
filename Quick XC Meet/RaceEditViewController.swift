@@ -143,7 +143,7 @@ class RaceEditViewController: UIViewController, UITableViewDelegate,UITableViewD
         setHeadTimerConstraint()
         setAthleteTableViewConstraint()
         
-        self.title = "\(meet.name) \(selectedRace ?? "")"
+        self.title = "\(selectedRace ?? "")"
         
         
        

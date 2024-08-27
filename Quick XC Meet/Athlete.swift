@@ -22,6 +22,7 @@ public class Athlete : Codable{
     var races: [Race]
     var gender: String
     var uid: String?
+    var archived = false
   
     
     init(f: String, l: String, s: String, g: Int, sf: String, gen: String) {
@@ -43,6 +44,9 @@ public class Athlete : Codable{
         schoolFull = dict["schoolFull"] as! String
         gender = dict["gender"] as! String
         races = [Race]()
+        if let a = dict["archived"]{
+            archived = a as! Bool
+        }
         if let dictRaces = dict["races"] as? [String: Any]{
         for (key, value) in dictRaces{
             if let r = value as? [String: Any]{
@@ -120,7 +124,7 @@ public class Athlete : Codable{
     func saveToFirebase() {
         let ref = Database.database().reference()
        
-        let dict = ["first": self.first, "last":self.last, "school": self.school, "schoolFull":self.schoolFull, "grade":self.grade, "gender": self.gender] as [String : Any]
+        let dict = ["first": self.first, "last":self.last, "school": self.school, "schoolFull":self.schoolFull, "grade":self.grade, "gender": self.gender, "archived": self.archived] as [String : Any]
         var schoolUid = ""
         for sch in AppData.schoolsNew{
             if sch.full == schoolFull{
@@ -188,7 +192,7 @@ public class Athlete : Codable{
     
     func updateFirebaseAthleteInfo(){
         var ref = Database.database().reference()
-        let dict = ["first": self.first, "last":self.last, "school": self.school, "schoolFull":self.schoolFull, "grade":self.grade, "gender": self.gender] as [String : Any]
+        let dict = ["first": self.first, "last":self.last, "school": self.school, "schoolFull":self.schoolFull, "grade":self.grade, "gender": self.gender, "archived": self.archived] as [String : Any]
         var schoolUid = ""
         for sch in AppData.schoolsNew{
             if sch.full == schoolFull{

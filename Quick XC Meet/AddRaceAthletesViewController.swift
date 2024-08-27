@@ -243,14 +243,14 @@ class AddRaceAthletesViewController: UIViewController, UITableViewDelegate,UITab
         displayedAthletes.removeAll()
         if selectedRaceGender == "C"{
             for a in AppData.allAthletes{
-                if a.schoolFull == chosenSchool && a.last != "??" {
+                if a.schoolFull == chosenSchool && a.last != "??" && a.archived == false {
                     displayedAthletes.append(a)
                 }
             }
         }
         else{
             for a in AppData.allAthletes{
-                if a.schoolFull == chosenSchool && a.last != "??" && a.gender == selectedRaceGender{
+                if a.schoolFull == chosenSchool && a.last != "??" && a.gender == selectedRaceGender && a.archived == false{
                     displayedAthletes.append(a)
                 }
             }

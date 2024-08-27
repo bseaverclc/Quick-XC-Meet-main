@@ -14,6 +14,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     func configure(text: String){
        // print("inside configure")
+        
         initLabelOutlet.text = text
         
     }

@@ -80,8 +80,10 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
             displayAllAthletes()
         case 1:
             filterByWomen()
-        default:
+        case 2: 
             filterByMen()
+        default:
+            filterByArchived()
         }
        
         
@@ -91,7 +93,7 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
         displayedAthletes.removeAll()
         for a in AppData.allAthletes{
             print("\(school.full) athlete school \(a.schoolFull)")
-            if school.full == a.schoolFull && a.last != "??"{
+            if school.full == a.schoolFull && a.last != "??" && a.archived == false{
                 displayedAthletes.append(a)
             }
         }
@@ -341,12 +343,38 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 self.present(alert, animated: false)
             }
+        
+        let archive = UITableViewRowAction(style: .normal, title: "Archive") { (action, indexPath) in
+            for i in 0 ..< AppData.allAthletes.count{
+                if self.displayedAthletes[indexPath.row].equals(other: AppData.allAthletes[i]){
+                    
+                    AppData.allAthletes[i].archived = true
+                    AppData.allAthletes[i].updateFirebaseAthleteInfo()
+                    self.displayedAthletes.remove(at: indexPath.row)
+                    self.tableView.reloadData()
+                    break
+                }
+            }
+        }
+        
+        let unarchive = UITableViewRowAction(style: .normal, title: "Unarchive") { (action, indexPath) in
+            for i in 0 ..< AppData.allAthletes.count{
+                if self.displayedAthletes[indexPath.row].equals(other: AppData.allAthletes[i]){
+                    
+                    AppData.allAthletes[i].archived = false
+                    AppData.allAthletes[i].updateFirebaseAthleteInfo()
+                    self.displayedAthletes.remove(at: indexPath.row)
+                    self.tableView.reloadData()
+                    break
+                }
+            }
+        }
 
         
 
         edit.backgroundColor = UIColor.blue
 
-        return [delete, edit]
+        return [delete, edit, archive, unarchive]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -622,17 +650,31 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
             displayAllAthletes()
         case 1:
             filterByWomen()
-        default:
+        case 2:
             filterByMen()
+        default:
+            filterByArchived()
         }
     
+    }
+    
+    func filterByArchived(){
+        displayedAthletes.removeAll()
+        for a in AppData.allAthletes{
+            print("\(school.full) athlete school \(a.schoolFull)")
+            if school.full == a.schoolFull && a.last != "??" && a.archived == true{
+                displayedAthletes.append(a)
+            }
+        }
+        sortByName()
+        tableView.reloadData()
     }
     
     func filterByMen(){
         displayedAthletes.removeAll()
         for a in AppData.allAthletes{
             print("\(school.full) athlete school \(a.schoolFull)")
-            if school.full == a.schoolFull && a.last != "??" && a.gender == "M"{
+            if school.full == a.schoolFull && a.last != "??" && a.gender == "M" && a.archived == false{
                 displayedAthletes.append(a)
             }
         }
@@ -645,7 +687,7 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
         displayedAthletes.removeAll()
         for a in AppData.allAthletes{
             print("\(school.full) athlete school \(a.schoolFull)")
-            if school.full == a.schoolFull && a.last != "??" && a.gender == "F"{
+            if school.full == a.schoolFull && a.last != "??" && a.gender == "F" && a.archived == false{
                 displayedAthletes.append(a)
             }
         }
