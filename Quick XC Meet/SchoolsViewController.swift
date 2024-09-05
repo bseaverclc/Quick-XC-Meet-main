@@ -394,6 +394,9 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 let fullSchool = alert.textFields![0].text!
                 let initSchool = alert.textFields![1].text!
                 //let csvURL = alert.textFields![2].text!
+                   
+                   let characterset = CharacterSet(charactersIn:
+                      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ")
                    if fullSchool == ""{
                        error = "Must include school name"
                        badInput = true
@@ -402,6 +405,10 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
                        error = "Must include school initials"
                        badInput = true
                    }
+                    else if fullSchool.rangeOfCharacter(from: characterset.inverted) != nil {
+                               error = "Only letters and numbers allowed in school name"
+                        badInput = true
+                            }
                    
                 for school in AppData.schoolsNew{
                     if (school.full == fullSchool){
@@ -442,6 +449,7 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
                         let newSchool = School(full: fullSchool, inits: alert.textFields![1].text!)
                         
                         AppData.schoolsNew.append(newSchool)
+                        AppData.schoolsNew.sort(by: {$0.full < $1.full})
                         print("added school to schoolsNew in !badInput")
                         if let user = Auth.auth().currentUser{
                             newSchool.addCoach(email: user.email!)
