@@ -49,15 +49,20 @@ class AthletesViewController: UIViewController, UITableViewDelegate, UITableView
         self.title = "\(school.inits) Roster"
        // displayedAthletes = AppData.allAthletes
         AppData.allAthletes.removeAll()
-        
-//        if school.full == "ST. THOMAS THE APOSTLE"{
-//            school.full = "ST THOMAS THE APOSTLE"
-//        }
-        for a in school.athletes{
-//            if a.schoolFull == "ST. THOMAS THE APOSTLE"{
-//                a.schoolFull = "ST THOMAS THE APOSTLE"
-//            }
+      
+        // Changing a school name
+//        if school.full == "85 BEARSS"{
+//            school.full = "85 BEARS"
+//            school.inits = "85B"
+//            // updates school and athletes in the school
 //            school.updateFirebase()
+//        }
+       
+        for a in school.athletes{
+//            if a.schoolFull == "ST. THOMAS MORE SCHOOL"{
+//                a.schoolFull = "ST THOMAS MORE SCHOOL"
+//            }
+            
             AppData.allAthletes.append(a)
         }
         

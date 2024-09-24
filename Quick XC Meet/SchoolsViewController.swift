@@ -228,12 +228,13 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
                             
                           
                             
-                            //changing school names to new names
+                            //changing school name for each athlete
                             for a in AppData.schoolsNew[indexPath.row].athletes{
                                 a.schoolFull = alert.textFields![0].text!
                                 a.school = alert.textFields![1].text!
-                                print("changed athletes school to \(a.schoolFull)")
-                                a.updateFirebase(schoolUid: AppData.schoolsNew[indexPath.row].uid!)
+                                //print("changed athletes school to \(a.schoolFull)")
+                                // don't need to update firebase bc it will happen when I update school later
+                                //a.updateFirebase(schoolUid: AppData.schoolsNew[indexPath.row].uid!)
                             }
                             
                             // old way to change school name of all athletes
@@ -248,10 +249,15 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
 //                                        }
 //                                    }
                             
-                            // changing all meets to new school names
+                           
+                            
+                            // changing all meets to new school name
                             for m in AppData.meets{
-                                m.schools.removeValue(forKey: AppData.schoolsNew[indexPath.row].full)
-                                m.schools[alert.textFields![0].text!] = alert.textFields![1].text!
+                                if m.schools[AppData.schoolsNew[indexPath.row].full] != nil{
+                                    m.schools.removeValue(forKey: AppData.schoolsNew[indexPath.row].full)
+                                    m.schools[alert.textFields![0].text!] = alert.textFields![1].text!
+                                    m.updateFirebase(m: m)
+                                }
                                 
                             
                             }
@@ -261,7 +267,10 @@ class SchoolsViewController: UIViewController,UITableViewDelegate, UITableViewDa
                                 if s.full == AppData.schoolsNew[indexPath.row].full{
                                     s.full = alert.textFields![0].text!
                                     s.inits = alert.textFields![1].text!
+                                    // updates school and athletes
                                     s.updateFirebase()
+                                    print("found old school and updated it to new school name")
+                                    print(s.uid)
                                     break
                                 }
                             }

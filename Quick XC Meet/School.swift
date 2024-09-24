@@ -77,11 +77,13 @@ public class School: Codable{
             var ref = Database.database().reference().child("schoolsNew").child(ui)
             let dict = ["full": self.full, "inits":self.inits, "coaches": coaches] as [String : Any]
             ref.updateChildValues(dict)
+            print("update childvalues in updateFirebase function in School class \(self.full)")
             
             ref = ref.child("athletes")
             for a in athletes{
                 let athDict = ["first": a.first,"last": a.last,"school": a.school, "schoolFull": a.schoolFull] as [String : Any]
-                ref.child(a.uid!).updateChildValues(athDict)
+              ref.child(a.uid!).updateChildValues(athDict)
+                print("update all altheletes in updateFirebase function in School class")
                 
             }
         }

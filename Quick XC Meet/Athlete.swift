@@ -310,7 +310,7 @@ public class Athlete : Codable{
       
         
         
-        print("updating athlete in firebase")
+        //print("updating athlete in firebase")
 }
     
 
